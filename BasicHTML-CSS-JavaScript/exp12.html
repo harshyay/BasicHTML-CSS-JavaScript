@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+	<h2>DOM Selector </h2>
+	<p class="intro">Query Selector all demo </p>
+	<p class="class"> The DOM selectors by class </p>
+	<p class="class"> Demonstration of DOM Selector by class </p>
+	<p id="demo1"> </p>
+	<p id="demo2"> </p>
+	<p id="query"> </p>
+	<p id="querySel"> </p>
+</body>
+<script >
+	var classElement=document.getElementsByClassName("class");
+	document.getElementById("demo1").innerHTML="1."+ classElement[0].innerHTML;
+	document.getElementById("demo2").innerHTML="2."+ classElement[1].innerHTML;
+	var querySelector=document.querySelectorAll("p.intro");
+	document.getElementById("query").innerHTML=querySelector[0].innerHTML;
+
+	var querySelector=document.querySelector("p.intro");
+	document.getElementById("querySel").innerHTML=querySelector.innerHTML;
+</script>
+</html>

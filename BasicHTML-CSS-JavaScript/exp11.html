@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h2> DOM Selector </h2>
+	<p id="intro"> Hello World added!</p>
+
+
+	<p id="demo"> </p>
+	<p> Elements by Tag name </p>
+	<p id="tagName"> </p>
+	<p id="tagName1"> </p>
+	<p id="tagName2"> </p>
+	<p id="tagName3"> </p>
+	<p id="header"> </p>
+	<script >
+		var myElement=document.getElementById("intro");
+		document.getElementById('demo').innerHTML="The Text From Inner HTML is " + myElement.innerHTML;
+
+		var x=document.getElementsByTagName('p');
+		document.getElementById("tagName").innerHTML="The text in paragraph is: " + x[0].innerHTML;
+		document.getElementById("tagName1").innerHTML="The text in paragraph is: " + x[1].innerHTML;
+		document.getElementById("tagName2").innerHTML="The text in paragraph is: " + x[2].innerHTML;
+		document.getElementById("tagName3").innerHTML="The text in paragraph is: " + x[3].innerHTML;
+		var headerr=getElementsByTagName("h2");
+		document.getElementById("header").innerHTML="Header data " + headerr[0].innerHTML;
+	</script>
+</body>
+</html>

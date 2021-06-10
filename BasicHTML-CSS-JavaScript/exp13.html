@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Demo</title>
+</head>
+<body onload="checkCookies()">
+	<h1 onclick="this.innerHTML='Ooooops!'">Click here</h1>
+	<h1 onclick="changeText(this)">Click on the text!</h1>
+	<button onclick="displayDate()">Display Time</button>
+	<p id="date"></p>
+	<button id="myBtn">Try It</button>
+	<p id="dateTime"></p>
+
+<p id="cookieData"></p>
+
+Enter Your Name: <input type="text" id="fname" onchange="myFunction()">
+
+<div onmouseover="mOver(this)" onmouseup="mOut(this)" style="background-color: blue; width:200px;">
+	ME
+</div>
+</body>
+<script type="text/javascript">
+	document.getElementById("myBtn").onclick=displayDate;
+	function changeText(id)
+	{
+		id.innerHTML='Ooooops!'
+	}
+
+	function displayDate()
+	{
+		//document.getElementById('date').innerHTML=Date();
+		document.getElementById('dateTime').innerHTML=Date();
+	}
+
+	function checkCookies()
+	{
+		var text;
+		if(navigator.cookieEnabled==true){
+			text="Cookies are Enabled"
+		}
+
+		else{
+			text="Cookies are not Enabled"
+		}
+
+		document.getElementById("cookieData").innerHTML=text;
+	}
+
+	function myFunction(){
+		var x=document.getElementById("fname");
+		x.value=x.value.toUpperCase();
+	}
+
+	function mOver(obj)
+	{
+		obj.innerHTML="Thank You";
+	}
+	function mOut(obj){
+		obj.innerHTML="Mouse Out";
+	}
+</script>
+</html>
